@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Volcano Bay - Dimsum Mentai</title>
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Mengunduh ikon resmi agar simbol WhatsApp, Instagram, TikTok & Lokasi muncul -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- NAVIGASI ATAS -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="nav-brand">THE VOLCANO BAY</span>
+            <div class="nav-links">
+                <a href="#menu">Menu</a>
+                <a href="#kontak">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SPANDUK UTAMA (HERO SECTION) -->
+    <header class="hero-banner">
+        <div class="hero-content">
+            <!-- FOTO UTAMA LOGO -->
+            <img src="assets/images/logo.jpg" alt="Logo The Volcano Bay" class="main-logo">
+            <h1 class="brand-title">THE VOLCANO BAY</h1>
+            <h2 class="brand-subtitle">Dimsum Mentai Lezat & Nikmat</h2>
+            <p class="hero-desc">Nikmati perpaduan dimsum premium yang lembut dengan lumatan saus mentai melimpah yang dibakar smoky. 100% Halal & Higienis!</p>
+            <a href="#menu" class="btn-primary">Pesan Sekarang</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEKSI KATALOG MENU MENARIK -->
+        <section id="menu" class="produk-section">
+            <div class="section-header">
+                <span class="badge-title">Varian Andalan</span>
+                <h2>Menu Volcano Series</h2>
+            </div>
+            <div class="produk-container">
+                
+                <!-- Menu 1: Dimsum Mentai Keju -->
+                <div class="produk-card">
+                    <div class="tag-diskon">Best Seller</div>
+                    <div class="img-frame">
+                        <!-- FOTO DIMSUM KEJU -->
+                        <img src="assets/images/keju.jpg" alt="Volcano Dimsum Mentai Keju">
+                    </div>
+                    <div class="card-body">
+                        <h3>Volcano Mentai Keju</h3>
+                        <!-- Elemen Tampilan Harga Real-time -->
+                        <p class="harga" id="total-harga-keju">Rp 28.000</p>
+                        <p class="deskripsi">Dimsum premium dengan lelehan saus mentai khas Volcano Bay yang melimpah, dipadu racikan keju gurih yang di-torch sempurna.</p>
+                        
+                        <!-- PENGATUR PORSI DINAMIS KEJU -->
+                        <div class="quantity-row" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin: 15px 0;">
+                            <button type="button" class="btn-qty" onclick="aturPorsi('keju', -1, 28000)" style="width: 32px; height: 32px; border: none; background-color: #ff5e3a; color: white; font-size: 1.1rem; font-weight: bold; border-radius: 6px; cursor: pointer;">-</button>
+                            <input type="number" id="qty-keju" value="1" min="1" readonly style="width: 40px; text-align: center; font-weight: 700; font-size: 1rem; border: 1px solid #ddd; border-radius: 6px; padding: 4px 0;">
+                            <button type="button" class="btn-qty" onclick="aturPorsi('keju', 1, 28000)" style="width: 32px; height: 32px; border: none; background-color: #ff5e3a; color: white; font-size: 1.1rem; font-weight: bold; border-radius: 6px; cursor: pointer;">+</button>
+                        </div>
+
+                        <a href="#" id="wa-btn-keju" class="btn-wa-order" target="_blank"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Menu 2: Dimsum Mentai Nori -->
+                <div class="produk-card">
+                    <div class="tag-diskon new">Varian Baru</div>
+                    <div class="img-frame">
+                        <!-- FOTO DIMSUM NORI -->
+                        <img src="assets/images/nori.jpg" alt="Volcano Dimsum Mentai Nori">
+                    </div>
+                    <div class="card-body">
+                        <h3>Volcano Mentai Nori</h3>
+                        <!-- Elemen Tampilan Harga Real-time -->
+                        <p class="harga" id="total-harga-nori">Rp 28.000</p>
+                        <p class="deskripsi">Sensasi dimsum lembut berselimut saus mentai smoky yang gurih, disajikan dengan taburan rumput laut kering (nori) premium yang melimpah.</p>
+                        
+                        <!-- PENGATUR PORSI DINAMIS NORI -->
+                        <div class="quantity-row" style="display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin: 15px 0;">
+                            <button type="button" class="btn-qty" onclick="aturPorsi('nori', -1, 28000)" style="width: 32px; height: 32px; border: none; background-color: #ff5e3a; color: white; font-size: 1.1rem; font-weight: bold; border-radius: 6px; cursor: pointer;">-</button>
+                            <input type="number" id="qty-nori" value="1" min="1" readonly style="width: 40px; text-align: center; font-weight: 700; font-size: 1rem; border: 1px solid #ddd; border-radius: 6px; padding: 4px 0;">
+                            <button type="button" class="btn-qty" onclick="aturPorsi('nori', 1, 28000)" style="width: 32px; height: 32px; border: none; background-color: #ff5e3a; color: white; font-size: 1.1rem; font-weight: bold; border-radius: 6px; cursor: pointer;">+</button>
+                        </div>
+
+                        <a href="#" id="wa-btn-nori" class="btn-wa-order" target="_blank"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKSI INFORMASI ALAMAT & SOSMED -->
+        <section id="kontak" class="kontak-section">
+            <div class="section-header">
+                <span class="badge-title">Lokasi & Socials</span>
+                <h2>Hubungi Kedai Kami</h2>
+            </div>
+            
+            <div class="kontak-wrapper">
+                <!-- Blok Teks Alamat Kedai -->
+                <div class="alamat-toko-box">
+                    <div class="icon-header-box" style="width: 70px; height: 70px; border-radius: 50%; overflow: hidden; border: 2px solid #fff0ec; margin: 0 auto 15px auto; display: flex; justify-content: center; align-items: center; background-color: #f0f0f0;">
+                        <!-- FIX PERBAIKAN: Mengeluarkan gambar toko.jpg di dalam lingkaran profil lokasi kedai -->
+                        <img src="assets/images/toko.jpg" alt="Foto Kedai The Volcano Bay" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <h3>Lokasi Kedai</h3>
+                    
+                    <!-- TAMBAHAN BARU: Teks Informasi Patokan Letak Toko Kedai -->
+                    <p style="font-size: 0.9rem; color: #ff5e3a; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">📍 Posisi Kedai Utama Kami</p>
+                    
+                    <div class="alamat-detail-text">
+                        <p><strong>Jalan Letda Sujono, Simpang Mangga, Naga Jaya 1</strong></p>
+                        <p>Kec. Bandar Huluan, Kab. Simalungun</p>
+                        <p>Sumatera Utara, ID, 21193</p>
+                    </div>
+                </div>
+
+                <!-- Tombol Media Sosial -->
+                <div class="sosmed-container">
+                    <h3>Saluran Resmi Admin</h3>
+                    <p>Klik tombol di bawah untuk langsung terhubung ke profil dan chat admin kami:</p>
+                    
+                    <div class="grid-sosmed" style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+                        <a href="#" id="wa-admin-utama" class="box-link wa" target="_blank" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 14px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; background-color: #25D366;"><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp</a>
+                        <a href="https://instagram.com" target="_blank" class="box-link ig" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 14px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);"><i class="fab fa-instagram" style="margin-right: 8px;"></i> Instagram</a>
+                        <a href="https://tiktok.com" target="_blank" class="box-link tt" style="display: flex; justify-content: center; align-items: center; width: 100%; padding: 14px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; background-color: #000000;"><i class="fab fa-tiktok" style="margin-right: 8px;"></i> TikTok</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER MENYATU BERSIH TANPA BLOK HITAM -->
+    <footer style="text-align: center; padding: 25px 0; border-top: 1px solid #f0f0f0; background: transparent; font-size: 0.85rem; color: #777777; margin-top: 30px;">
+        <p>&copy; 2026 The Volcano Bay. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Menghubungkan ke file JavaScript terpisah -->
+    <script src="js/script.js"></script>
+</body>
+</html>
